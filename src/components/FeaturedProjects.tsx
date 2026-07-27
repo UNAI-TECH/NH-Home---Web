@@ -79,12 +79,12 @@ export default function FeaturedProjects({ onBookSiteVisit }: FeaturedProjectsPr
         </div>
 
         {/* Tab Filters */}
-        <div className="flex flex-wrap gap-1.5 text-xs font-semibold">
+        <div className="flex items-center justify-start overflow-x-auto gap-2 text-xs font-semibold pb-2 pt-1 scrollbar-none max-w-full">
           {["All", "Apartment", "Villa", "Residential"].map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat as any)}
-              className={`px-3 py-1.5 rounded-lg border transition-all ${
+              className={`shrink-0 whitespace-nowrap px-3 py-1.5 rounded-lg border transition-all ${
                 activeCategory === cat
                   ? "bg-neutral-900 border-neutral-900 text-white shadow-sm"
                   : "bg-white border-neutral-200 text-neutral-600 hover:border-neutral-300"
@@ -93,12 +93,12 @@ export default function FeaturedProjects({ onBookSiteVisit }: FeaturedProjectsPr
               {cat === "All" ? "All Categories" : cat + "s"}
             </button>
           ))}
-          <span className="h-6 w-px bg-neutral-200 self-center hidden sm:block mx-1" />
+          <span className="h-6 w-px bg-neutral-200 self-center shrink-0 mx-1" />
           {["All", "Ongoing", "Upcoming", "Completed"].map((status) => (
             <button
               key={status}
               onClick={() => setActiveStatus(status as any)}
-              className={`px-3 py-1.5 rounded-lg border transition-all ${
+              className={`shrink-0 whitespace-nowrap px-3 py-1.5 rounded-lg border transition-all ${
                 activeStatus === status
                   ? "bg-gradient-to-r from-orange-500 to-amber-500 border-orange-500 text-white shadow-sm font-bold"
                   : "bg-white border-neutral-200 text-neutral-600 hover:border-neutral-300"

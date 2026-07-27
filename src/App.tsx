@@ -298,7 +298,7 @@ export default function App() {
     { type: "progress", url: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80", title: "Slab Concreting, NH Grandeur" },
     { type: "interiors", url: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=600&q=80", title: "Modular Kitchen Fitment" },
     { type: "completed", url: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=600&q=80", title: "Premium Residential block, Adyar" },
-    { type: "progress", url: "https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&w=600&q=80", title: "Brick Masonry, NH Elite" },
+    { type: "progress", url: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80", title: "Brick Masonry, NH Elite" },
     { type: "interiors", url: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80", title: "Modern Bedroom False Ceiling" },
   ];
 
@@ -1107,15 +1107,15 @@ export default function App() {
 
           {/* Interactive photo gallery on specific views */}
           {activeView === "home" && (
-            <div className="mt-20 space-y-6" id="global-gallery">
+            <div className="mt-16 sm:mt-20 space-y-6 px-4 sm:px-6 lg:px-8" id="global-gallery">
               <div className="text-center max-w-md mx-auto space-y-1">
                 <span className="text-xs font-mono font-bold tracking-widest text-orange-600 uppercase">GALLERY INVENTORY</span>
                 <h3 className="font-display text-xl font-bold text-neutral-900">NH Promoter Construction Logs</h3>
                 <p className="text-xs text-neutral-500">Live snippets of active brickworks, completed luxury homes, and premium bedroom woodwork.</p>
               </div>
 
-              {/* Gallery category tabs */}
-              <div className="flex justify-center space-x-1 text-xs font-semibold">
+              {/* Gallery category tabs with touch-friendly horizontal scrolling on mobile */}
+              <div className="flex items-center justify-start sm:justify-center overflow-x-auto gap-2 text-xs font-semibold pb-2 pt-1 scrollbar-none px-1">
                 {[
                   { id: "all", label: "All Logs" },
                   { id: "completed", label: "Completed Projects" },
@@ -1125,10 +1125,10 @@ export default function App() {
                   <button
                     key={tab.id}
                     onClick={() => setGalleryFilter(tab.id)}
-                    className={`px-3 py-1.5 rounded-lg border transition-all ${
+                    className={`shrink-0 whitespace-nowrap px-3.5 py-2 rounded-xl border transition-all ${
                       galleryFilter === tab.id
-                        ? "bg-neutral-900 border-neutral-900 text-white shadow-sm"
-                        : "bg-white border-neutral-200 text-neutral-600 hover:border-neutral-300"
+                        ? "bg-neutral-900 border-neutral-900 text-white shadow-sm font-bold"
+                        : "bg-white border-neutral-200 text-neutral-600 hover:border-neutral-300 font-medium"
                     }`}
                   >
                     {tab.label}
@@ -1137,11 +1137,19 @@ export default function App() {
               </div>
 
               {/* Gallery Photos Grid */}
-              <div className="grid grid-cols-2 gap-4 md:grid-cols-3 pt-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-2">
                 {filteredGallery.map((img, idx) => (
-                  <div key={idx} className="group relative rounded-2xl overflow-hidden h-44 bg-neutral-100 border border-neutral-200 shadow-sm">
-                    <img referrerPolicy="no-referrer" src={img.url} alt={img.title} className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                  <div key={idx} className="group relative rounded-2xl overflow-hidden h-52 sm:h-48 bg-neutral-100 border border-neutral-200 shadow-sm hover:shadow-md transition-all">
+                    <img 
+                      referrerPolicy="no-referrer" 
+                      src={img.url} 
+                      alt={img.title} 
+                      onError={(e) => {
+                        e.currentTarget.src = "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=600&q=80";
+                      }}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
                       <div>
                         <span className="block text-[9px] font-mono font-bold text-orange-400 tracking-wider uppercase">{img.type}</span>
                         <h4 className="text-xs font-bold text-white mt-0.5">{img.title}</h4>
@@ -1155,7 +1163,7 @@ export default function App() {
 
           {/* Blogs list preview under Home or specific views */}
           {activeView === "home" && (
-            <div className="mt-20 space-y-6" id="global-blogs-recap">
+            <div className="mt-16 sm:mt-20 space-y-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto" id="global-blogs-recap">
               <div className="flex justify-between items-end gap-2 max-w-7xl mx-auto">
                 <div>
                   <span className="text-xs font-mono font-bold tracking-widest text-orange-600 uppercase font-bold">LATEST ARTICLES</span>
@@ -1163,7 +1171,7 @@ export default function App() {
                 </div>
                 <button 
                   onClick={() => setActiveView("about")} 
-                  className="text-xs font-bold text-orange-600 hover:text-orange-700 flex items-center space-x-1"
+                  className="text-xs font-bold text-orange-600 hover:text-orange-700 flex items-center space-x-1 shrink-0"
                 >
                   <span>Read All Guides</span>
                   <ArrowRight className="h-4 w-4" />
@@ -1176,17 +1184,17 @@ export default function App() {
 
           {/* Testimonials Review section on Home page */}
           {activeView === "home" && (
-            <div className="mt-10 mb-16 md:mt-20 md:mb-32 space-y-4 md:space-y-6" id="global-testimonials">
-              <div className="text-center max-w-md mx-auto space-y-1 px-4">
+            <div className="mt-12 mb-16 md:mt-20 md:mb-32 space-y-4 md:space-y-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto" id="global-testimonials">
+              <div className="text-center max-w-md mx-auto space-y-1">
                 <span className="text-[10px] sm:text-xs font-mono font-bold tracking-widest text-orange-600 uppercase">CLIENT TESTIMONIES</span>
                 <h3 className="font-display text-lg sm:text-xl font-bold text-neutral-900">What Our Happy Homeowners Say</h3>
                 <p className="text-[11px] sm:text-xs text-neutral-500">Uncompromising opinions from elite families who purchased residential flats and villas.</p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 pt-1 max-w-5xl mx-auto px-2 sm:px-0">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-1 max-w-5xl mx-auto">
                 {testimonials.map((t) => (
-                  <div key={t.name} className="rounded-xl border border-orange-200 bg-white p-3 sm:p-4 space-y-2 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
-                    <div className="space-y-1.5">
+                  <div key={t.name} className="rounded-2xl border border-orange-200 bg-white p-4 space-y-3 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                    <div className="space-y-2">
                       <div className="flex justify-between items-center">
                         <div className="flex space-x-0.5">
                           {[...Array(t.rating)].map((_, i) => (
@@ -1197,13 +1205,13 @@ export default function App() {
                           {t.project.split(" ")[1]}
                         </span>
                       </div>
-                      <p className="text-[10px] sm:text-[11px] text-neutral-700 leading-snug italic text-justify">
+                      <p className="text-xs text-neutral-700 leading-relaxed italic text-justify">
                         "{t.quote}"
                       </p>
                     </div>
-                    <div className="pt-1.5 border-t border-orange-200/60">
+                    <div className="pt-2 border-t border-orange-200/60">
                       <h4 className="font-display text-xs font-bold text-neutral-900">{t.name}</h4>
-                      <span className="block text-[8px] sm:text-[9px] text-neutral-500 mt-0.5 font-semibold">{t.role}</span>
+                      <span className="block text-[9px] sm:text-[10px] text-neutral-500 mt-0.5 font-semibold">{t.role}</span>
                     </div>
                   </div>
                 ))}

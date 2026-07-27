@@ -47,12 +47,12 @@ export default function BlogsSection() {
           />
         </div>
 
-        <div className="flex flex-wrap gap-2 text-xs font-semibold">
+        <div className="flex items-center justify-start overflow-x-auto gap-2 text-xs font-semibold pb-2 pt-1 scrollbar-none max-w-full">
           {["All", "Government Approval Guide", "Property Investment", "Construction Tips"].map((cat) => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat as any)}
-              className={`px-3.5 py-2 rounded-xl border transition-all ${
+              className={`shrink-0 whitespace-nowrap px-3.5 py-2 rounded-xl border transition-all ${
                 selectedCategory === cat
                   ? "bg-neutral-950 border-neutral-900 text-white shadow-md font-bold"
                   : "bg-white border-neutral-200 text-neutral-600 hover:border-neutral-300 hover:bg-neutral-50"
