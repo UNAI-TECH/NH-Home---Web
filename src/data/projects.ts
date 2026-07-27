@@ -329,12 +329,6 @@ export const blogs: Blog[] = [
 
 export const teamMembers: TeamMember[] = [
   {
-    name: "Er. Nehemiah Nesanathan",
-    role: "Founder & Chairman",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80",
-    bio: "Over 15 years of civil engineering and property development expertise in Chennai. He established NH Homes with the vision of providing absolute transparent pricing and top-tier construction quality to every family."
-  },
-  {
     name: "H Charles Immanuvel",
     role: "Managing Director",
     image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80",
@@ -345,12 +339,6 @@ export const teamMembers: TeamMember[] = [
     role: "Chief Executive Officer",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
     bio: "Directs operations, technical engineering standards, and developer logistics at NH Homes. Ensures compliance with premium construction plans and on-time structural deliveries across Chennai. Contact: +91 98847 70108."
-  },
-  {
-    name: "Ar. Sneha Nair",
-    role: "Chief Architect",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
-    bio: "A graduate of School of Architecture & Planning, Anna University, specializing in minimalist luxury layouts, eco-friendly ventilation structures, and high-end modern residential elevations."
   }
 ];
 

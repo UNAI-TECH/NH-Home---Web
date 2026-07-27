@@ -58,7 +58,7 @@ function EarthMoverSection({ onContactClick }: { onContactClick: () => void }) {
   ];
 
   return (
-    <div className="space-y-8 md:space-y-10 rounded-3xl border border-orange-200 bg-gradient-to-br from-orange-200 via-orange-50/60 to-white p-4 sm:p-6 md:p-10 shadow-md" id="earth-mover-services-block">
+    <div className="space-y-8 md:space-y-10 rounded-3xl border border-orange-200 bg-white p-4 sm:p-6 md:p-10 shadow-md" id="earth-mover-services-block">
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div className="space-y-2 max-w-2xl">
           <span className="inline-flex items-center space-x-1.5 rounded-full bg-orange-100 text-orange-700 border border-orange-200 px-3 py-1 text-xs font-bold uppercase tracking-wider font-mono">
@@ -89,7 +89,7 @@ function EarthMoverSection({ onContactClick }: { onContactClick: () => void }) {
           return (
             <div 
               key={card.title}
-              className="rounded-2xl border border-orange-200 bg-gradient-to-br from-orange-200 via-orange-50/60 to-white p-5 space-y-4 hover:border-orange-300 hover:shadow-lg transition-all group flex flex-col justify-between"
+              className="rounded-2xl border border-orange-200 bg-white p-5 space-y-4 hover:border-orange-300 hover:shadow-lg transition-all group flex flex-col justify-between"
             >
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
@@ -488,7 +488,7 @@ export default function App() {
                       { val: "25+", label: "Architects & Engineers" },
                       { val: "500K+", label: "Sq.ft Developed" }
                     ].map((st) => (
-                      <div key={st.label} className="rounded-2xl border border-orange-200 bg-gradient-to-br from-orange-200 via-orange-50/60 to-white p-4 text-center shadow-md hover:shadow-lg transition-all">
+                      <div key={st.label} className="rounded-2xl border border-orange-200 bg-white p-4 text-center shadow-md hover:shadow-lg transition-all">
                         <span className="block font-display text-lg md:text-xl font-extrabold text-orange-600">{st.val}</span>
                         <span className="block text-[10px] font-display tracking-wider text-neutral-600 uppercase mt-1 font-semibold">{st.label}</span>
                       </div>
@@ -511,7 +511,7 @@ export default function App() {
                       ].map((item) => {
                         const Icon = item.icon;
                         return (
-                          <div key={item.title} className="rounded-2xl border border-orange-200 bg-gradient-to-br from-orange-200 via-orange-50/60 to-white p-5 space-y-3 shadow-md hover:border-orange-300 hover:shadow-lg transition-all">
+                          <div key={item.title} className="rounded-2xl border border-orange-200 bg-white p-5 space-y-3 shadow-md hover:border-orange-300 hover:shadow-lg transition-all">
                             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-orange-100 text-orange-600">
                               <Icon className="h-5 w-5" />
                             </div>
@@ -617,7 +617,7 @@ export default function App() {
 
               {/* ================= PROJECTS VIEW ================= */}
               {activeView === "projects" && (
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32 pb-10 md:pt-40 md:pb-16 space-y-8" id="projects-view-container">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-28 sm:pt-36 md:pt-40 pb-12 md:pb-16 space-y-8" id="projects-view-container">
                   <div className="space-y-1.5">
                     <span className="text-xs font-mono font-bold tracking-widest text-orange-600 uppercase">PORTFOLIO</span>
                     <h2 className="font-display text-2xl font-bold text-neutral-900">NH Homes Signature Developments</h2>
@@ -630,7 +630,7 @@ export default function App() {
 
               {/* ================= SERVICES VIEW ================= */}
               {activeView === "services" && (
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32 pb-10 md:pt-40 md:pb-16 space-y-12" id="services-view-container">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-28 sm:pt-36 md:pt-40 pb-12 md:pb-16 space-y-12" id="services-view-container">
                   <div className="space-y-1.5">
                     <span className="text-xs font-mono font-bold tracking-widest text-orange-600 uppercase">SERVICES</span>
                     <h2 className="font-display text-2xl font-bold text-neutral-900">Our Comprehensive Real Estate Services</h2>
@@ -641,7 +641,7 @@ export default function App() {
                     {services.map((srv) => (
                       <div 
                         key={srv.id} 
-                        className="rounded-2xl border border-orange-100/80 bg-gradient-to-br from-orange-100/70 via-orange-50/20 to-white p-6 shadow-sm space-y-4 hover:shadow-md transition-all flex flex-col justify-between"
+                        className="rounded-2xl border border-orange-100/80 bg-white p-5 sm:p-6 shadow-sm space-y-4 hover:shadow-md transition-all flex flex-col justify-between"
                         id={`service-detail-${srv.id}`}
                       >
                         <div className="space-y-3">
@@ -681,7 +681,7 @@ export default function App() {
 
               {/* ================= CONSTRUCTION & ESTIMATORS ================= */}
               {activeView === "construction" && (
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32 pb-10 md:pt-40 md:pb-16 space-y-12" id="construction-view-container">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-28 sm:pt-36 md:pt-40 pb-12 md:pb-16 space-y-12" id="construction-view-container">
                   <div className="space-y-1.5">
                     <span className="text-xs font-mono font-bold tracking-widest text-orange-600 uppercase">ESTIMATORS & ESTIMATES</span>
                     <h2 className="font-display text-2xl font-bold text-neutral-900">Custom Home Construction Packages & Cost Estimators</h2>
@@ -699,7 +699,7 @@ export default function App() {
 
               {/* ================= JOINT VENTURE VIEW ================= */}
               {activeView === "joint-venture" && (
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32 pb-10 md:pt-40 md:pb-16 space-y-12" id="joint-venture-view-container">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-28 sm:pt-36 md:pt-40 pb-12 md:pb-16 space-y-12" id="joint-venture-view-container">
                   <JointVentureSection onSubmitLead={handleSubmitLead} />
                 </div>
               )}
@@ -707,14 +707,14 @@ export default function App() {
 
               {/* ================= ABOUT US VIEW ================= */}
               {activeView === "about" && (
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32 pb-10 md:pt-40 md:pb-16 space-y-16" id="about-view-container">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-28 sm:pt-36 md:pt-40 pb-12 md:pb-16 space-y-16" id="about-view-container">
                   {/* Company Story */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div className="space-y-4">
                       <span className="text-xs font-mono font-bold tracking-widest text-orange-600 uppercase">ABOUT US</span>
                       <h2 className="font-display text-2xl md:text-3xl font-extrabold text-neutral-900">Empowering Chennai with Structural Landmarks Since 2016</h2>
                       <p className="text-xs text-neutral-600 leading-relaxed text-justify">
-                        NH Homes was founded by Er. Nehemiah Nesanathan with the singular mission of bringing accountability, legal transparency, and world-class engineering quality to the home promoters sector in Tamil Nadu. We believe that a home is a lifetime investment, and families deserve builder relationships based on clean titles and honest pricing.
+                        NH Homes was established by H Charles Immanuvel & S Prasanna with the singular mission of bringing accountability, legal transparency, and world-class engineering quality to the home promoters sector in Tamil Nadu. We believe that a home is a lifetime investment, and families deserve builder relationships based on clean titles and honest pricing.
                       </p>
                       
                       <div className="grid grid-cols-2 gap-4 pt-2">
@@ -734,18 +734,18 @@ export default function App() {
                     </div>
                   </div>
 
-                  {/* Chairman Message */}
-                  <div className="rounded-2xl border border-orange-100/80 bg-gradient-to-br from-orange-100/70 via-orange-50/20 to-white p-6 md:p-8 shadow-sm grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+                  {/* Founder Message Card */}
+                  <div className="rounded-2xl border border-orange-100/80 bg-white p-5 sm:p-6 md:p-8 shadow-sm grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
                     <div className="md:col-span-4 flex flex-col items-center text-center">
                       <div className="h-32 w-32 rounded-full overflow-hidden border-2 border-orange-500 bg-neutral-50">
-                        <img referrerPolicy="no-referrer" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" alt="Er. Nehemiah Nesanathan" className="w-full h-full object-cover" />
+                        <img referrerPolicy="no-referrer" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" alt="H Charles Immanuvel & S Prasanna" className="w-full h-full object-cover" />
                       </div>
-                      <h4 className="font-display text-base font-bold text-neutral-900 mt-3">Er. Nehemiah Nesanathan</h4>
-                      <span className="text-[10px] font-mono text-orange-600 font-bold uppercase tracking-wider">Founder & Executive Chairman</span>
+                      <h4 className="font-display text-base font-bold text-neutral-900 mt-3">H Charles Immanuvel & S Prasanna</h4>
+                      <span className="text-[10px] font-mono text-orange-600 font-bold uppercase tracking-wider">FOUNDERS & EXECUTIVE DIRECTORS</span>
                     </div>
 
                     <div className="md:col-span-8 space-y-3">
-                      <h3 className="font-display text-base font-bold text-neutral-950">A Message From Our Founder</h3>
+                      <h3 className="font-display text-base font-bold text-neutral-950">A Message From Our Founders</h3>
                       <p className="text-xs text-neutral-600 leading-relaxed text-justify">
                         "At NH Homes, we don't just compile concrete and steel. We build relationships of absolute trust. Every family that purchases our flat or entrusts us with their joint venture is placing their hard-earned future into our hands. That is why our core committee holds a non-negotiable directive: 100% legal document inspection, superior quality materials, and weekly construction updates accessible directly on our client portal."
                       </p>
@@ -766,7 +766,7 @@ export default function App() {
                         { title: "ISO 9001:2015 Cert.", desc: "Quality Management System standards certified for construction execution." },
                         { title: "Licensed Civil Counsel", desc: "Direct legal clearance panel for document validation." }
                       ].map(c => (
-                        <div key={c.title} className="rounded-xl border border-orange-100/80 bg-gradient-to-br from-orange-100/70 via-orange-50/20 to-white p-4 text-center shadow-sm">
+                        <div key={c.title} className="rounded-xl border border-orange-100/80 bg-white p-4 text-center shadow-sm">
                           <span className="font-display text-sm font-bold text-neutral-900 block">{c.title}</span>
                           <span className="text-[11px] text-neutral-500 block leading-relaxed mt-1">{c.desc}</span>
                         </div>
@@ -802,9 +802,9 @@ export default function App() {
 
               {/* ================= CONTACT US VIEW ================= */}
               {activeView === "contact" && (
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32 pb-10 md:pt-40 md:pb-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start" id="contact-view-container">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-28 sm:pt-36 md:pt-40 pb-12 md:pb-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start" id="contact-view-container">
                   {/* Left: Contact Form */}
-                  <div className="lg:col-span-7 rounded-2xl border border-neutral-200 bg-white p-6 md:p-8 shadow-sm space-y-4">
+                  <div className="lg:col-span-7 rounded-2xl border border-neutral-200 bg-white p-5 sm:p-6 md:p-8 shadow-sm space-y-4">
                     <div className="space-y-1">
                       <span className="text-xs font-mono font-bold tracking-widest text-orange-600 uppercase">CONTACT US</span>
                       <h2 className="font-display text-2xl font-bold text-neutral-900">Connect With NH Homes Leadership</h2>
@@ -880,7 +880,7 @@ export default function App() {
 
                   {/* Right: Office Coordinates & Maps */}
                   <div className="lg:col-span-5 space-y-6">
-                    <div className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm space-y-5">
+                    <div className="rounded-2xl border border-neutral-200 bg-white p-5 sm:p-6 shadow-sm space-y-5">
                       <h3 className="font-display text-base font-bold text-neutral-900">Corporate Office Info</h3>
                       
                       <div className="space-y-4 text-xs">
@@ -936,7 +936,7 @@ export default function App() {
 
               {/* ================= CUSTOMER PORTAL VIEW ================= */}
               {activeView === "portal" && (
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32 pb-10 md:pt-40 md:pb-16" id="customer-portal-container">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-28 sm:pt-36 md:pt-40 pb-12 md:pb-16" id="customer-portal-container">
                   <CustomerPortal onSubmitLead={handleSubmitLead} />
                 </div>
               )}
@@ -944,7 +944,7 @@ export default function App() {
 
               {/* ================= DEVELOPER ADMIN DASHBOARD ================= */}
               {activeView === "admin" && (
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32 pb-10 md:pt-40 md:pb-16" id="admin-dashboard-active-view">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-28 sm:pt-36 md:pt-40 pb-12 md:pb-16" id="admin-dashboard-active-view">
                   <AdminDashboard />
                 </div>
               )}
@@ -1185,7 +1185,7 @@ export default function App() {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 pt-1 max-w-5xl mx-auto px-2 sm:px-0">
                 {testimonials.map((t) => (
-                  <div key={t.name} className="rounded-xl border border-orange-200 bg-gradient-to-br from-orange-200 via-orange-50/60 to-white p-3 sm:p-4 space-y-2 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                  <div key={t.name} className="rounded-xl border border-orange-200 bg-white p-3 sm:p-4 space-y-2 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                     <div className="space-y-1.5">
                       <div className="flex justify-between items-center">
                         <div className="flex space-x-0.5">

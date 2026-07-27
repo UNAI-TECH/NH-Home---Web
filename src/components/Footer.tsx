@@ -46,10 +46,10 @@ export default function Footer({ setActiveView, onSubmitLead }: FooterProps) {
                 <img src="/logo.png" alt="NH Homes Logo" className="h-full w-full object-contain" />
               </div>
               <div>
-                <span className="block font-display text-base md:text-xl font-bold tracking-tight text-white">
+                <span className="block font-mono text-base md:text-xl font-bold tracking-wider text-white leading-tight">
                   NH HOMES
                 </span>
-                <span className="block font-mono text-[9px] md:text-[10px] tracking-widest text-orange-400 uppercase font-bold">
+                <span className="block font-mono text-[9px] md:text-[10px] tracking-widest text-orange-400 uppercase font-bold mt-0.5">
                   Home Promoters
                 </span>
               </div>
@@ -151,32 +151,32 @@ export default function Footer({ setActiveView, onSubmitLead }: FooterProps) {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-4 pt-4 md:mt-12 md:pt-8 border-t border-neutral-700/80 flex flex-col sm:flex-row items-center justify-between gap-2.5 text-xs font-medium text-neutral-200">
+        <div className="mt-6 pt-6 md:mt-12 md:pt-8 border-t border-neutral-700/80 flex flex-col items-center justify-center text-center gap-4 text-xs font-medium text-neutral-200">
           <div>
             <p className="text-white font-bold text-[11px] md:text-xs">&copy; {new Date().getFullYear()} NH HOMES. All Rights Reserved.</p>
-            <p className="mt-0.5 text-neutral-300 leading-relaxed text-[10px] md:text-xs line-clamp-2 sm:line-clamp-none">
+            <p className="mt-1 text-neutral-300 leading-relaxed text-[10px] md:text-xs max-w-3xl mx-auto">
               Disclaimer: All project photos, FSI layouts, maps, and specifications are representations. Final designs are subject to government licensing.
             </p>
           </div>
-          <div className="shrink-0 pt-1 sm:pt-0">
+          <div className="flex justify-center pt-2">
             <a 
               href="https://www.unaitech.com/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center space-x-2.5 rounded-full bg-white px-3.5 py-1.5 md:px-4 md:py-2 border border-orange-200/80 shadow-sm hover:shadow-md hover:border-orange-300 transition-all group cursor-pointer text-left select-none"
+              className="flex items-center space-x-3 transition-all group cursor-pointer text-center select-none hover:opacity-90"
               title="Visit Unai Tech Official Website"
             >
               <div>
-                <span className="block font-mono text-[8px] md:text-[9px] font-bold tracking-widest text-neutral-400 uppercase leading-none mb-0.5 md:mb-1">
+                <span className="block font-display text-[10px] md:text-xs font-bold tracking-widest text-neutral-400 uppercase leading-none mb-1">
                   CRAFTED BY
                 </span>
-                <div className="flex items-center font-display text-xs md:text-sm font-extrabold tracking-tight leading-none">
-                  <span className="text-orange-600">UNAI</span>
-                  <span className="text-neutral-900 ml-1">TECH</span>
+                <div className="flex items-center justify-center font-display text-base md:text-lg font-extrabold tracking-tight leading-none">
+                  <span className="text-orange-500">UNAI</span>
+                  <span className="text-white ml-1.5">TECH</span>
                 </div>
               </div>
-              <div className="flex h-6 w-6 md:h-7 md:w-7 items-center justify-center rounded-full bg-orange-600 text-white shrink-0 group-hover:scale-110 transition-transform shadow-sm">
-                <ArrowUpRight className="h-3.5 w-3.5 md:h-4 md:w-4 stroke-[2.5]" />
+              <div className="flex h-7 w-7 md:h-8 md:w-8 items-center justify-center rounded-full bg-orange-500 text-white shrink-0 group-hover:scale-110 group-hover:bg-orange-400 transition-all shadow-sm">
+                <ArrowUpRight className="h-4 w-4 md:h-4.5 md:w-4.5 stroke-[2.5]" />
               </div>
             </a>
           </div>

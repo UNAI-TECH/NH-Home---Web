@@ -65,7 +65,7 @@ export default function FeaturedProjects({ onBookSiteVisit }: FeaturedProjectsPr
   return (
     <div className="space-y-8" id="featured-projects-module">
       {/* Filters Toolbar */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-gradient-to-br from-orange-200 via-orange-50/60 to-white p-4 rounded-2xl border border-orange-200 shadow-md">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white p-4 rounded-2xl border border-orange-200 shadow-md">
         {/* Search */}
         <div className="relative flex-1 max-w-md">
           <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-neutral-400" />
@@ -115,7 +115,7 @@ export default function FeaturedProjects({ onBookSiteVisit }: FeaturedProjectsPr
         {filteredProjects.map((p) => (
           <div
             key={p.id}
-            className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-orange-200 bg-gradient-to-br from-orange-200 via-orange-50/60 to-white transition-all duration-300 hover:shadow-xl hover:border-orange-300"
+            className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-orange-200 bg-white transition-all duration-300 hover:shadow-xl hover:border-orange-300"
             id={`project-card-${p.id}`}
           >
             {/* Image Wrap */}

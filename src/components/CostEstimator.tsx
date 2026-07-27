@@ -65,7 +65,7 @@ export default function CostEstimator({ onSubmitLead }: CostEstimatorProps) {
   };
 
   return (
-    <div className="rounded-2xl border border-orange-200 bg-gradient-to-br from-orange-200 via-orange-50/60 to-white p-6 shadow-md md:p-8" id="cost-estimator-container">
+    <div className="rounded-2xl border border-orange-200 bg-white p-4 sm:p-6 md:p-8 shadow-md" id="cost-estimator-container">
       <div className="mb-6 flex items-center space-x-3">
         <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-100 text-orange-600">
           <Calculator className="h-5 w-5" />

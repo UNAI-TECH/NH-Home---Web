@@ -89,7 +89,7 @@ export default function JointVentureSection({ onSubmitLead }: JointVentureSectio
         {jvBenefits.map((b) => {
           const Icon = b.icon;
           return (
-            <div key={b.title} className="flex gap-4 rounded-2xl border border-orange-200 bg-gradient-to-br from-orange-200 via-orange-50/60 to-white p-4 sm:p-5 shadow-md hover:border-orange-300 transition-all">
+            <div key={b.title} className="flex gap-4 rounded-2xl border border-orange-200 bg-white p-4 sm:p-5 shadow-md hover:border-orange-300 transition-all">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-orange-100 text-orange-600">
                 <Icon className="h-5 w-5" />
               </div>
@@ -105,7 +105,7 @@ export default function JointVentureSection({ onSubmitLead }: JointVentureSectio
       {/* Main JV Flow and Form */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         {/* Left: Interactive Form */}
-        <div className="lg:col-span-5 rounded-2xl border border-orange-200 bg-gradient-to-br from-orange-200 via-orange-50/60 to-white p-4 sm:p-6 shadow-md">
+        <div className="lg:col-span-5 rounded-2xl border border-orange-200 bg-white p-4 sm:p-6 shadow-md">
           <div className="flex items-center space-x-2.5 mb-4">
             <Handshake className="h-5 w-5 text-orange-600 shrink-0" />
             <h3 className="font-display text-base font-bold text-neutral-900">Land Valuation Form</h3>

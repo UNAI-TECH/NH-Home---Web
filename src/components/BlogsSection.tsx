@@ -35,7 +35,7 @@ export default function BlogsSection() {
   return (
     <div className="space-y-8" id="blogs-section-module">
       {/* Search and category filter toolbar */}
-      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 bg-gradient-to-br from-orange-200 via-orange-50/60 to-white p-4 sm:p-5 rounded-2xl border border-orange-200 shadow-md">
+      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 bg-white p-4 sm:p-5 rounded-2xl border border-orange-200 shadow-md">
         <div className="relative flex-1 max-w-md">
           <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-neutral-400" />
           <input
@@ -69,7 +69,7 @@ export default function BlogsSection() {
         {filteredBlogs.map((b) => (
           <div
             key={b.id}
-            className="group flex flex-col justify-between overflow-hidden rounded-2xl border border-orange-200 bg-gradient-to-br from-orange-200 via-orange-50/60 to-white transition-all duration-300 hover:shadow-xl hover:border-orange-300"
+            className="group flex flex-col justify-between overflow-hidden rounded-2xl border border-orange-200 bg-white transition-all duration-300 hover:shadow-xl hover:border-orange-300"
             id={`blog-card-${b.id}`}
           >
             {/* Blog Image Header */}

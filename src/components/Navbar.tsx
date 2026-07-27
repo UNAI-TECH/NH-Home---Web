@@ -96,10 +96,10 @@ export default function Navbar({ activeView, setActiveView, onBookSiteVisit }: N
         >
           <img src="/logo.png" alt="NH Homes Logo" className="h-11 sm:h-16 w-auto object-contain" />
           <div>
-            <span className="block font-display text-base sm:text-xl font-bold tracking-tight text-neutral-900">
+            <span className="block font-mono text-base sm:text-xl font-bold tracking-wider text-neutral-900 leading-tight">
               NH HOMES
             </span>
-            <span className="block font-mono text-[9px] sm:text-[10px] tracking-widest text-neutral-500 uppercase">
+            <span className="block font-mono text-[9px] sm:text-[10px] tracking-widest text-neutral-500 uppercase font-semibold mt-0.5">
               Home Promoters
             </span>
           </div>
@@ -214,18 +214,21 @@ export default function Navbar({ activeView, setActiveView, onBookSiteVisit }: N
         </nav>
 
         {/* Action Buttons */}
-        <div className="hidden lg:flex items-center space-x-3">
+        <div className="hidden lg:flex items-center space-x-2.5">
           <button
-            id="nav-customer-portal-btn"
-            onClick={() => handleNavClick("portal")}
-            className={`px-4 py-2 text-sm font-medium border rounded-lg transition-all ${
-              activeView === "portal"
-                ? "bg-neutral-800 text-white border-neutral-800"
-                : "text-neutral-700 border-neutral-300 hover:bg-neutral-50"
+            id="nav-cost-estimator-btn"
+            onClick={() => handleNavClick("construction")}
+            className={`flex items-center space-x-2 rounded-lg px-3.5 py-2 text-sm font-medium transition-all ${
+              activeView === "construction" 
+                ? "bg-orange-100 text-orange-700 border border-orange-300 font-semibold shadow-sm" 
+                : "bg-white/80 text-neutral-800 border border-neutral-200/80 hover:bg-orange-50 hover:text-orange-600 hover:border-orange-300"
             }`}
+            title="Cost Estimator"
           >
-            Customer Portal
+            <Calculator className="h-4 w-4 text-orange-600 shrink-0" />
+            <span>Cost Estimator</span>
           </button>
+
           <button
             id="nav-book-site-btn"
             onClick={onBookSiteVisit}
@@ -238,13 +241,6 @@ export default function Navbar({ activeView, setActiveView, onBookSiteVisit }: N
 
         {/* Mobile Hamburger Menu */}
         <div className="flex lg:hidden items-center space-x-2">
-          <button
-            id="nav-customer-portal-mobile-btn"
-            onClick={() => handleNavClick("portal")}
-            className="px-3 py-1.5 text-xs font-medium border border-neutral-300 rounded-lg hover:bg-neutral-50 mr-1"
-          >
-            Portal
-          </button>
           <button
             id="mobile-menu-toggle"
             onClick={() => setIsOpen(!isOpen)}
@@ -288,25 +284,29 @@ export default function Navbar({ activeView, setActiveView, onBookSiteVisit }: N
                 );
               })}
               
-              <div className="grid grid-cols-2 gap-3 pt-4 border-t border-neutral-100">
+              <div className="pt-4 border-t border-neutral-100 flex flex-col gap-2">
                 <button
-                  id="mobile-nav-portal"
-                  onClick={() => handleNavClick("portal")}
-                  className={`w-full py-2.5 text-center text-sm font-medium border rounded-lg ${
-                    activeView === "portal" ? "bg-neutral-800 text-white border-neutral-800" : "text-neutral-700 border-neutral-300"
-                  }`}
+                  id="mobile-nav-cost-estimator"
+                  onClick={() => {
+                    setIsOpen(false);
+                    handleNavClick("construction");
+                  }}
+                  className="w-full flex items-center justify-center space-x-2 bg-orange-50 text-orange-700 border border-orange-200 py-2.5 text-center text-sm font-semibold rounded-lg hover:bg-orange-100 transition-all"
                 >
-                  Portal
+                  <Calculator className="h-4 w-4 text-orange-600" />
+                  <span>Cost Estimator</span>
                 </button>
+
                 <button
                   id="mobile-nav-book-site"
                   onClick={() => {
                     setIsOpen(false);
                     onBookSiteVisit();
                   }}
-                  className="w-full bg-orange-600 py-2.5 text-center text-sm font-medium text-white rounded-lg hover:bg-orange-700"
+                  className="w-full bg-orange-600 py-2.5 text-center text-sm font-medium text-white rounded-lg hover:bg-orange-700 flex items-center justify-center space-x-2 transition-all"
                 >
-                  Book Visit
+                  <PhoneCall className="h-4 w-4" />
+                  <span>Book Visit</span>
                 </button>
               </div>
             </div>
