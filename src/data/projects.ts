@@ -1,4 +1,6 @@
 import { Project, Service, Blog, TeamMember, Testimonial, FAQItem, ConstructionPackage } from "../types";
+import charlesImg from "../assets/charles.jpg";
+import prasannaImg from "../assets/prasanna.png";
 
 export const signatureProjects: Project[] = [
   {
@@ -331,13 +333,13 @@ export const teamMembers: TeamMember[] = [
   {
     name: "H Charles Immanuvel",
     role: "Managing Director",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80",
+    image: charlesImg,
     bio: "Co-directs strategic growth, corporate governance, and joint venture promotions at NH Homes. His focus on strict legal clearances and robust builder agreements ensures safety for land owners. Contact: +91 95512 34597."
   },
   {
     name: "S Prasanna",
     role: "Chief Executive Officer",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
+    image: prasannaImg,
     bio: "Directs operations, technical engineering standards, and developer logistics at NH Homes. Ensures compliance with premium construction plans and on-time structural deliveries across Chennai. Contact: +91 98847 70108."
   }
 ];

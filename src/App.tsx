@@ -20,6 +20,8 @@ import BookSiteVisitModal from "./components/BookSiteVisitModal";
 import FeaturedProjects from "./components/FeaturedProjects";
 import JointVentureSection from "./components/JointVentureSection";
 import BlogsSection from "./components/BlogsSection";
+import charlesImg from "./assets/charles.jpg";
+import prasannaImg from "./assets/prasanna.png";
 
 // Data Source
 import { signatureProjects, services, teamMembers, testimonials, faqs } from "./data/projects";
@@ -734,21 +736,57 @@ export default function App() {
                     </div>
                   </div>
 
-                  {/* Founder Message Card */}
-                  <div className="rounded-2xl border border-orange-100/80 bg-white p-5 sm:p-6 md:p-8 shadow-sm grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-                    <div className="md:col-span-4 flex flex-col items-center text-center">
-                      <div className="h-32 w-32 rounded-full overflow-hidden border-2 border-orange-500 bg-neutral-50">
-                        <img referrerPolicy="no-referrer" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" alt="H Charles Immanuvel & S Prasanna" className="w-full h-full object-cover" />
-                      </div>
-                      <h4 className="font-display text-base font-bold text-neutral-900 mt-3">H Charles Immanuvel & S Prasanna</h4>
-                      <span className="text-[10px] font-mono text-orange-600 font-bold uppercase tracking-wider">FOUNDERS & EXECUTIVE DIRECTORS</span>
+                  {/* Executive Leadership Section */}
+                  <div className="space-y-6">
+                    <div className="text-center max-w-md mx-auto space-y-1">
+                      <span className="text-xs font-mono font-bold tracking-widest text-orange-600 uppercase">LEADERSHIP COMMITTEE</span>
+                      <h3 className="font-display text-xl font-bold text-neutral-900">A Message From Our Leadership</h3>
                     </div>
 
-                    <div className="md:col-span-8 space-y-3">
-                      <h3 className="font-display text-base font-bold text-neutral-950">A Message From Our Founders</h3>
-                      <p className="text-xs text-neutral-600 leading-relaxed text-justify">
-                        "At NH Homes, we don't just compile concrete and steel. We build relationships of absolute trust. Every family that purchases our flat or entrusts us with their joint venture is placing their hard-earned future into our hands. That is why our core committee holds a non-negotiable directive: 100% legal document inspection, superior quality materials, and weekly construction updates accessible directly on our client portal."
-                      </p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      {/* H Charles Immanuvel Card */}
+                      <div className="rounded-2xl border border-orange-100/80 bg-white p-5 sm:p-6 shadow-sm flex flex-col justify-between space-y-4 hover:shadow-md transition-all">
+                        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 text-center sm:text-left">
+                          <div className="h-28 w-28 rounded-full overflow-hidden border-2 border-orange-500 bg-neutral-50 shrink-0 shadow-md">
+                            <img referrerPolicy="no-referrer" src={charlesImg} alt="H Charles Immanuvel" className="w-full h-full object-cover object-center" />
+                          </div>
+                          <div className="space-y-1">
+                            <h4 className="font-display text-lg font-bold text-neutral-900">H Charles Immanuvel</h4>
+                            <span className="inline-block text-[10px] font-mono text-orange-600 font-bold uppercase tracking-wider bg-orange-50 px-2 py-0.5 rounded-md border border-orange-200">
+                              Managing Director
+                            </span>
+                            <p className="text-xs text-neutral-600 leading-relaxed pt-2 text-justify">
+                              "At NH Homes, we build relationships of absolute trust. Every family that purchases our flat or entrusts us with their joint venture is placing their hard-earned future into our hands. We enforce 100% legal document inspection and superior quality materials."
+                            </p>
+                          </div>
+                        </div>
+                        <div className="pt-3 border-t border-neutral-100 flex items-center justify-between text-xs text-neutral-500 font-mono">
+                          <span>Direct Line:</span>
+                          <a href="tel:+919551234597" className="font-bold text-orange-600 hover:underline">+91 95512 34597</a>
+                        </div>
+                      </div>
+
+                      {/* S Prasanna Card */}
+                      <div className="rounded-2xl border border-orange-100/80 bg-white p-5 sm:p-6 shadow-sm flex flex-col justify-between space-y-4 hover:shadow-md transition-all">
+                        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 text-center sm:text-left">
+                          <div className="h-28 w-28 rounded-full overflow-hidden border-2 border-orange-500 bg-neutral-50 shrink-0 shadow-md">
+                            <img referrerPolicy="no-referrer" src={prasannaImg} alt="S Prasanna" className="w-full h-full object-cover object-top" />
+                          </div>
+                          <div className="space-y-1">
+                            <h4 className="font-display text-lg font-bold text-neutral-900">S Prasanna</h4>
+                            <span className="inline-block text-[10px] font-mono text-orange-600 font-bold uppercase tracking-wider bg-orange-50 px-2 py-0.5 rounded-md border border-orange-200">
+                              Chief Executive Officer
+                            </span>
+                            <p className="text-xs text-neutral-600 leading-relaxed pt-2 text-justify">
+                              "Directs operations, technical engineering standards, and developer logistics at NH Homes. Ensures compliance with premium construction plans and on-time structural deliveries across Chennai."
+                            </p>
+                          </div>
+                        </div>
+                        <div className="pt-3 border-t border-neutral-100 flex items-center justify-between text-xs text-neutral-500 font-mono">
+                          <span>Direct Line:</span>
+                          <a href="tel:+919884770108" className="font-bold text-orange-600 hover:underline">+91 98847 70108</a>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
